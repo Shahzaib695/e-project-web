@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<?php
+<!-- <?php
 require_once '../includes/db.inc.php';
 try {
 	$stmt = $pdo->query("SELECT * FROM products");
@@ -28,7 +28,7 @@ try {
 	echo "Error fetching products: " . $e->getMessage();
 	$products = [];
 }
-?>
+?> -->
 
 <body class="goto-here">
 	<div class="py-1 bg-black">
@@ -93,8 +93,8 @@ try {
 				<div class="container-fluid p-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end"
 						data-scrollax-parent="true">
-						<img class="one-third order-md-last img-fluid"
-							src="background/hero-image-removebg-preview.png" alt="Gift Shop Hero Image">
+						<img class="bg-transparentc:\Users\DELL\AppData\Local\Temp\Rar$DRa19088.334.rartemp\WhatsApp_Image_2025-07-15_at_11.47.11_7e4e67ec-removebg-preview.png one-third order-md-last img-fluid"
+							src="hello.png" alt="Gift Shop Hero Image">
 						<div class="one-forth d-flex align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
@@ -191,17 +191,17 @@ try {
 		</div>
 		<div class="container">
 			<div class="row">
-				<?php foreach($products as $row): ?>
+				<!-- <?php foreach($products as $row): ?> -->
 	<div class="col-md-3 d-flex">
 		<div class="product d-flex flex-column position-relative">
-			<?php if($row['stock'] > 0): ?>
+			<!-- <?php if($row['stock'] > 0): ?> -->
 				<span class="badge badge-success position-absolute" style="top: 10px; left: 10px;">In Stock</span>
-			<?php else: ?>
+			<!-- <?php else: ?> -->
 				<span class="badge badge-danger position-absolute" style="top: 10px; left: 10px;">Out of Stock</span>
-			<?php endif; ?>
+			<!-- <?php endif; ?> -->
 
 			<a href="#" class="img-prod">
-				<img class="img-fluid" src="product/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['name']) ?>">
+				<img class="img-fluid" src="" alt="">
 				<div class="overlay"></div>
 			</a>
 
@@ -219,15 +219,16 @@ try {
 					</div>
 				</div>
 
-				<h3><a href="#"><?= htmlspecialchars($row['name']) ?></a></h3>
+				<h3><a href="#"></a></h3>
 				<div class="pricing">
 					<p class="price"><span>Rs <?= number_format($row['price']) ?></span></p>
 				</div>
 
 				<p class="bottom-area d-flex px-3">
-					<a href="#" class="add-to-cart text-center py-2 mr-1">
-						<span>Add to cart <i class="ion-ios-add ml-1"></i></span>
-					</a>
+				<a href="../cart-handler.php?action=remove&id=<?= $product['id'] ?>">
+    <span class="ion-ios-close"></span>
+</a>
+
 					<a href="#" class="buy-now text-center py-2">
 						Buy now <span><i class="ion-ios-cart ml-1"></i></span>
 					</a>
@@ -235,7 +236,7 @@ try {
 			</div>
 		</div>
 	</div>
-<?php endforeach; ?>
+<!-- <?php endforeach; ?> -->
 
 			</div>
 
@@ -545,7 +546,7 @@ try {
 					</a>
 				</div>
 			</div>
-			<div class="row mb-5">
+			<div class="row mb-2">
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Minishop</h2>
@@ -558,7 +559,7 @@ try {
 					</div>
 				</div>
 				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-5">
+					<div class="ftco-footer-widget mb-2 ml-md-3">
 						<h2 class="ftco-heading-2">Menu</h2>
 						<ul class="list-unstyled">
 							<li><a href="#" class="py-2 d-block">Shop</a></li>
@@ -568,11 +569,11 @@ try {
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Help</h2>
+				<div class="col-lg">
+					<div class="ftco-footer-widget mb-2">
+						<h2 class="ftco-heading-6 text-center">Help</h2>
 						<div class="d-flex">
-							<ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+							<ul class="list-unstyled mr-l-3 pr-l-3 mr-4">
 								<li><a href="#" class="py-2 d-block">Shipping Information</a></li>
 								<li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
 								<li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
@@ -586,9 +587,9 @@ try {
 					</div>
 				</div>
 				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
+					<div class="ftco-footer-widget mb-2">
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
-						<div class="block-23 mb-3">
+						<div class="block-22 mb-2">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain
 										View, San Francisco, California, USA</span></li>
@@ -602,7 +603,7 @@ try {
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col mt-4 text-center">
 
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
